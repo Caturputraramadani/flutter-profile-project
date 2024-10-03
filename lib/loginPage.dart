@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'Page2.dart';
-import 'main.dart'; // Import the Home page correctly
+import 'main.dart'; 
 
 class LoginPage extends StatefulWidget {
   @override
@@ -39,7 +38,7 @@ class _LoginPageState extends State<LoginPage> {
             padding: const EdgeInsets.all(20.0),
             child: Card(
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.0)),
-              color: Color.fromRGBO(231, 68, 14, 0.235), // Semi-transparent white card
+              color: Color.fromRGBO(231, 68, 14, 0.235), 
               elevation: 5,
               child: Padding(
                 padding: const EdgeInsets.all(16.0),
@@ -57,19 +56,19 @@ class _LoginPageState extends State<LoginPage> {
                         decoration: InputDecoration(
                           labelText: 'Username',
                           border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10.0), // Add border radius
+                            borderRadius: BorderRadius.circular(10.0),
                           ),
                           filled: true,
-                          fillColor: Colors.transparent, // Make input transparent
+                          fillColor: Colors.transparent, 
                           enabledBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10.0), // Add border radius
-                            borderSide: BorderSide(color: Colors.white), // Border color
+                            borderRadius: BorderRadius.circular(10.0), 
+                            borderSide: BorderSide(color: Colors.white), 
                           ),
                           focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10.0), // Add border radius
-                            borderSide: BorderSide(color: Colors.white), // Border color when focused
+                            borderRadius: BorderRadius.circular(10.0), 
+                            borderSide: BorderSide(color: Colors.white), 
                           ),
-                          labelStyle: TextStyle(color: Colors.white), // Label color
+                          labelStyle: TextStyle(color: Colors.white), 
                         ),
                         validator: (value) {
                           if (value == null || value.isEmpty) {
@@ -86,19 +85,19 @@ class _LoginPageState extends State<LoginPage> {
                         decoration: InputDecoration(
                           labelText: 'Password',
                           border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10.0), // Add border radius
+                            borderRadius: BorderRadius.circular(10.0), 
                           ),
                           filled: true,
-                          fillColor: Colors.transparent, // Make input transparent
+                          fillColor: Colors.transparent, 
                           enabledBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10.0), // Add border radius
-                            borderSide: BorderSide(color: Colors.white), // Border color
+                            borderRadius: BorderRadius.circular(10.0), 
+                            borderSide: BorderSide(color: Colors.white),
                           ),
                           focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10.0), // Add border radius
-                            borderSide: BorderSide(color: Colors.white), // Border color when focused
+                            borderRadius: BorderRadius.circular(10.0), 
+                            borderSide: BorderSide(color: Colors.white),
                           ),
-                          labelStyle: TextStyle(color: Colors.white), // Label color
+                          labelStyle: TextStyle(color: Colors.white), 
                         ),
                         obscureText: true,
                         validator: (value) {
