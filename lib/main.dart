@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'Page2.dart';
+import 'loginPage.dart'; // Import the login page
+
 void main() => runApp(MaterialApp(
   debugShowCheckedModeBanner: false,
-  home: home(),
+  home: LoginPage(), // Start from the login page
 ));
 
-class home extends StatelessWidget {
-  const home({ Key? key }) : super(key: key);
+class Home extends StatelessWidget {
+  const Home({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,9 +22,8 @@ class home extends StatelessWidget {
             fit: BoxFit.cover,
           ),
         ),
-
         child: Stack(
-          alignment: Alignment.center ,
+          alignment: Alignment.center,
           children: <Widget>[
             Container(
               width: MediaQuery.of(context).size.width,
@@ -29,44 +31,39 @@ class home extends StatelessWidget {
               padding: EdgeInsets.all(20.0),
               alignment: Alignment.center,
               child: Card(
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.0),),
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.0)),
                 color: Color.fromRGBO(231, 68, 14, 0.235),
                 child: Center(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: <Widget>[
-
                       CircleAvatar(
                         radius: 100.0,
-                        backgroundImage: 
-                        AssetImage('images/harry.jpg'),
+                        backgroundImage: AssetImage('images/harry.jpg'),
                       ),
                       Text("Catur Putra R.", 
-                      textAlign: TextAlign.center,
-                      style: TextStyle(fontSize: 18, color: Colors.white)
+                          textAlign: TextAlign.center,
+                          style: TextStyle(fontSize: 18, color: Colors.white)),
+                      Text(
+                        "Gryffindor Student at Hogwarts & Software and Game Dev Student in Muggle Vocational High School Wikrama",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(fontSize: 16, color: const Color.fromARGB(255, 238, 231, 205)),
                       ),
-                      Text("Gryffindor Student at Hogwarts & Software and Game Dev Student in Muggle Vocational HIgh School WIkrama",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(fontSize: 16, color: const Color.fromARGB(255, 238, 231, 205))
-                      ),
-
-                      TextButton(onPressed: (){
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => Page2()),
-
-
-
-
-                        );
-                      }, child:Text('See More')
+                      TextButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => Page2()),
+                          );
+                        },
+                        child: Text('See More'),
                       ),
                     ],
                   ),
                 ),
               ),
-            )
-          ]
+            ),
+          ],
         ),
       ),
     );
